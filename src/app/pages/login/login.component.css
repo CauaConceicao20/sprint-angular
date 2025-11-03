@@ -1,0 +1,169 @@
+main {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.painel_ranger {
+    margin: auto;
+    width: 50%;
+}
+
+.container_ranger img {
+    width: 100%;
+}
+
+.section_login {
+    background-color: #f1f1f1;
+    width: 50%;
+}
+
+.logo_container {
+    padding: 20px;
+    margin: auto;
+    width: 40%;
+}
+
+.logo_container img {
+    width: 100%;
+}
+
+.area_login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 209px 30px 0 30px;
+    padding: 0 20px 0 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #1351d8;
+}
+
+.form_login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+.input_container {
+    width: 100%;
+}
+
+.input_container input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    text-indent: 5%;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.input_container img {
+    width: 3.5%;
+    margin: auto;
+    position: relative;
+    top: -30px;
+    left: 10px;
+}
+
+.area_auto_login {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    background-color: #1351d8;
+    cursor: pointer;
+    color: white;
+}
+
+button:hover {
+    background-color: #1348b9;
+}
+
+.area_check {
+    width: 40px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #464545;
+    cursor: pointer;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -2px;
+    width: 51%;
+    height: 20px;
+    border-radius: 100px;
+    background-color: white;
+    border: 1px solid white;
+    color: #464545;
+}
+
+#info1 {
+    position: relative;
+    left: 96%;
+}
+
+#info2 {
+    position: relative;
+    top: 55px;
+    left: 96%;
+}
+
+
+
+@media (max-width: 1200px) {
+    .input_container img {
+        width: 20px;
+    }
+}
+
+@media (max-width: 750px) {
+    .painel_ranger {
+        display: none;
+    }
+
+    .section_login {
+        width: 100%;
+    }
+}
+
+@media (max-width: 392px) {
+    .input_container input {
+        text-indent: 7%;
+    }
+}
+
+@media (max-width: 372px) {
+    p {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 354px) {
+    p {
+        width: 100%;
+        font-size: 13px;
+    }
+}

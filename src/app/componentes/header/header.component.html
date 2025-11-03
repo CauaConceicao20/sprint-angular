@@ -1,0 +1,21 @@
+<header>
+     <button class="botao-hamburguer" (click)="menuAberto = !menuAberto">
+        <div class="menu-hamburguer-linha"></div>
+        <div class="menu-hamburguer-linha"></div>
+        <div class="menu-hamburguer-linha"></div>
+    </button>
+
+    <div class="profile">
+        <img src="icons/icon_profile.png" alt="">
+    </div>
+</header>
+
+
+<aside class="menu-lateral" [class.ativo]="menuAberto">
+    <h2>Menu</h2>
+    <nav class="navegacao-hamburguer">
+        <strong><a href="./index.html">Home</a></strong>
+        <strong><a href="lancamento.html">Lancamento</a></strong>
+        <strong><a href="./contato.html">Contato</a></strong>
+    </nav>
+</aside>

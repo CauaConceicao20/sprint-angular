@@ -1,0 +1,68 @@
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    padding: 8px;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.profile {
+    width: 45px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 100%;
+}
+
+.menu-lateral {
+    display: none;
+    position: fixed;
+    width: 20%;
+    height: 100vh;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 10000;
+}
+
+.menu-lateral.ativo {
+    display: block;
+}
+
+.menu-lateral a {
+    display: block;
+    color: #1351d8;
+    text-decoration: none;
+    padding: 6px 0;
+    margin: 10px 0 0 0;
+}
+
+
+.menu-lateral a:hover {
+    background-color: #d5d5d5;
+}
+
+.botao-hamburguer {
+    display: block;
+    z-index: 1100;
+    color: black;
+    border: none;
+    background: none;
+    margin-left: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.menu-hamburguer-linha {
+    width: 30px;
+    height: 1px;
+    margin: 5px;
+    border: 1px solid #1351d8;
+    border-radius: 5px;
+    background-color: #1351d8;
+}
