@@ -4,6 +4,7 @@ header {
     display: flex;
     padding: 8px;
     text-align: center;
+    top: 0;
     justify-content: space-between;
 }
 
@@ -20,11 +21,11 @@ header {
 .menu-lateral {
     display: none;
     position: fixed;
-    width: 20%;
+    width: 10%;
+    top: 0;
     height: 100vh;
     background-color: white;
     color: black;
-    padding: 20px;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     transition: right 0.3s ease;
     z-index: 10000;
@@ -34,11 +35,28 @@ header {
     display: block;
 }
 
+nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.logo_ford {
+    max-width: 190px;
+    margin: auto auto auto auto;
+    padding: 20px;
+}
+
+.logo_ford img {
+    width: 100%;
+}
+
 .menu-lateral a {
     display: block;
     color: #1351d8;
     text-decoration: none;
-    padding: 6px 0;
+    padding: 10px;
     margin: 10px 0 0 0;
 }
 
@@ -65,4 +83,26 @@ header {
     border: 1px solid #1351d8;
     border-radius: 5px;
     background-color: #1351d8;
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#overlay.ativo {
+    display: block;
+}
+
+.container:hover .overlay {
+    opacity: 1;
 }

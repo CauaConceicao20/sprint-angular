@@ -6,16 +6,20 @@
     </button>
 
     <div class="profile">
-        <img src="icons/icon_profile.png" alt="">
+        <a href="/login"><img src="icons/icon_profile.png" alt=""></a>
     </div>
 </header>
 
 
 <aside class="menu-lateral" [class.ativo]="menuAberto">
-    <h2>Menu</h2>
+    <div class="logo_ford">
+        <img src="img/ford.png" alt="logo ford">
+    </div>
+
+    
     <nav class="navegacao-hamburguer">
         <strong><a href="./index.html">Home</a></strong>
-        <strong><a href="lancamento.html">Lancamento</a></strong>
-        <strong><a href="./contato.html">Contato</a></strong>
-    </nav>
+        <strong><a href="lancamento.html">Dashboard</a></strong>
+    </nav>    
 </aside>
+<div id="overlay" [class.ativo]="menuAberto" (click)="menuAberto = !menuAberto"></div>

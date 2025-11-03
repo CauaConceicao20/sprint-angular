@@ -1,0 +1,71 @@
+main {
+    margin-top: 50px;
+}
+
+.area_titulo {
+    width: 100%;
+}
+
+h1 {
+    color:#1351d8;
+    text-align: center;
+    padding: 50px;
+}
+
+.area_cards {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+}
+
+.card {
+    width: 250px;
+    min-height: 150px;
+    border: 1px solid #ccc;
+    box-shadow: -3px 3px 10px black;
+}
+
+.header_card {
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc
+}
+
+h3 {
+    color: black;
+    padding: 10px;
+}
+
+.conteudo_card {
+    padding: 20px;
+    width: 100%;
+    color: #1351d8;
+    font-weight: bold;
+    margin-top: 7px;
+}
+.conteudo_card select {
+    padding: 5px;
+    width: 80%;
+}
+
+.conteudo_card p {
+    font-size: 25px;
+}
+
+.conteudo_card span {
+    font-size: 12px;
+    color: #ccc;
+}
+
+.area_veiculo{
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.area_veiculo img {
+    margin:auto;
+    width: 60%;
+}
