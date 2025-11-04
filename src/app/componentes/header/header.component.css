@@ -6,6 +6,7 @@ header {
     text-align: center;
     top: 0;
     justify-content: space-between;
+    background-color: white;
 }
 
 .profile {
@@ -21,7 +22,7 @@ header {
 .menu-lateral {
     display: none;
     position: fixed;
-    width: 10%;
+    width: 170px;
     top: 0;
     height: 100vh;
     background-color: white;

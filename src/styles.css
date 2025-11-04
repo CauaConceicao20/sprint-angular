@@ -3,3 +3,21 @@
     margin: 0;
     padding: 0;
 }
+
+html {
+    overflow: hidden;
+    height: 100%;
+    font-family: 'Ford Antenna', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+@media (max-width: 1187px) {
+    html {
+        overflow-y: scroll;
+    }
+}

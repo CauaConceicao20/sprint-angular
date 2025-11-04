@@ -1,5 +1,7 @@
 main {
-    margin-top: 50px;
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
 }
 
 .area_titulo {
@@ -7,7 +9,7 @@ main {
 }
 
 h1 {
-    color:#1351d8;
+    color: #1351d8;
     text-align: center;
     padding: 50px;
 }
@@ -45,6 +47,7 @@ h3 {
     font-weight: bold;
     margin-top: 7px;
 }
+
 .conteudo_card select {
     padding: 5px;
     width: 80%;
@@ -59,13 +62,49 @@ h3 {
     color: #ccc;
 }
 
-.area_veiculo{
+.area_veiculo {
     width: 100%;
     margin-top: 50px;
     text-align: center;
 }
 
 .area_veiculo img {
-    margin:auto;
+    margin: auto;
     width: 60%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #052a7a;
+}
+
+th,
+td {
+    text-align: left;
+    border: 1px solid black;
+    padding: 15px;
+
+}
+
+th {
+    width: 200px;
+    color: white;
+}
+
+td {
+    background-color: white;
+}
+
+td input {
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+    background-color: #052a7a;
+    height: 300px;
 }
