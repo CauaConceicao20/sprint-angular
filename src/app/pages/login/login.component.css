@@ -97,26 +97,61 @@ button:hover {
     background-color: #1348b9;
 }
 
-.area_check {
-    width: 40px;
-    height: 20px;
-    border-radius: 20px;
-    background-color: #464545;
-    cursor: pointer;
+.switch {
+    --secondary-container: #3a4b39;
+    --primary: #84da89;
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 2.2em;
+    height: 1.2em;
+}
+
+.switch input {
+    display: none;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
 .slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    left: -2px;
-    width: 51%;
-    height: 20px;
-    border-radius: 100px;
-    background-color: white;
-    border: 1px solid white;
-    color: #464545;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #313033;
+    transition: 0.2s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 0.8em;
+    width: 0.8em;
+    border-radius: 20px;
+    left: 0.2em;
+    bottom: 0.2em;
+    background-color: #aeaaae;
+    transition: 0.4s;
+}
+
+input:checked+.slider::before {
+    background-color: var(--primary);
+}
+
+input:checked+.slider {
+    background-color: var(--secondary-container);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px var(--secondary-container);
+}
+
+input:checked+.slider:before {
+    transform: translateX(1em);
 }
 
 #info1 {

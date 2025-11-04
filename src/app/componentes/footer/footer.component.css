@@ -1,0 +1,51 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #052a7a;
+}
+
+th,
+td {
+    text-align: left;
+    border: 1px solid black;
+    padding: 15px;
+}
+
+th {
+    width: 200px;
+    color: white;
+    background-color: #052a7a;
+}
+
+td {
+    background-color: white;
+}
+
+td input {
+    width: 100%;
+}
+
+.rodape_desktop {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #052a7a;
+    height: 130px;
+}
+
+.rodape_mobile {
+    display: none;
+}
+
+@media (max-width: 605px) {
+    .rodape_mobile {
+        display: block;
+    }
+
+    .rodape_desktop {
+        display: none;
+    }
+}

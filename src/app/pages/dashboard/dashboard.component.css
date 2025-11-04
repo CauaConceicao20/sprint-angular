@@ -2,6 +2,7 @@ main {
     display: flex;
     margin-top: 10px;
     flex-direction: column;
+    flex: grow 1;
 }
 
 .area_titulo {
@@ -73,38 +74,20 @@ h3 {
     width: 60%;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
+
+@media (max-width: 768px) {
+
+    section {
+        margin-bottom: 150px;
+    }
+
+    .area_cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .area_veiculo img {
+        width: 100%;
+    }
 }
 
-thead {
-    background-color: #052a7a;
-}
-
-th,
-td {
-    text-align: left;
-    border: 1px solid black;
-    padding: 15px;
-
-}
-
-th {
-    width: 200px;
-    color: white;
-}
-
-td {
-    background-color: white;
-}
-
-td input {
-    width: 100%;
-}
-
-footer {
-    width: 100%;
-    background-color: #052a7a;
-    height: 300px;
-}
