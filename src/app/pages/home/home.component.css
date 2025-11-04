@@ -1,14 +1,11 @@
 main {
+  background-position: center center;
   overflow-x: hidden;
-}
-
-.area_ranger {
-  width: 100%;
-  margin-top: 90px;
-}
-
-.area_ranger img {
-  width: 100%;
+  background-image: url('/img/ranger.png');
+  background-repeat: no-repeat;
+  background-size: 75%;
+  width: 100vw;
+  height: 100vh;
 }
 
 .modal_recepcao {
@@ -17,8 +14,8 @@ main {
   opacity: 1;
   top: 50%;
   left: 50%;
-  width: 60%;
-  height: 80%;
+  width: 50%;
+  height: 70%;
   transform: translate(-50%, -50%);
   border-radius: 10px;
   background-color: #f1f1f15b;
