@@ -9,17 +9,17 @@ import { Vehicle } from '../../models/vehicle.model';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [CommonModule, FormsModule ,HeaderComponent, FooterComponent],
+  imports: [CommonModule, FormsModule, HeaderComponent, FooterComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
 
-  selectedVehicle?: Vehicle;
+  public selectedVehicle?: Vehicle;
 
-  vehicles$: Observable<Vehicle[]>;
+  public vehicles$: Observable<Vehicle[]>;
 
-  constructor(private vehicleService: VehicleService) {
-     this.vehicles$ = this.vehicleService.getVehicles();
+  public constructor(private vehicleService: VehicleService) {
+    this.vehicles$ = this.vehicleService.getVehicles();
   }
 }

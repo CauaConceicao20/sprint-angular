@@ -89,7 +89,7 @@ app.get("/vehicles", (req, res) => {
 
 app.post("/vehicleData", (req, res) => {
     try {
-        const { vin } = req.body
+        const { vin }= req.body;
 
         switch (vin) {
             case "2FRHDUYS2Y63NHD22454":
@@ -153,16 +153,18 @@ app.post("/vehicleData", (req, res) => {
                 });
 
             default:
+                console.log(vin);
                 return res.status(400).json({
                     message: "Código VIN utilizado não foi encontrado!"
                 });
         }
 
-
     } catch (error) {
+        console.log(error);
         return res.status(500).json({
             message: "Falha na comunicação com o servidor!"
         });
+
     }
 })
 

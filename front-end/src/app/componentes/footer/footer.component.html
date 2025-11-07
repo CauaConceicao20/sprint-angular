@@ -12,21 +12,21 @@
         </thead>
         <tbody>
             <tr>
-                <td><input type="text"></td>
+                <td><input #vehicleVin type="text" (change)="searchInfoVehicle(vehicleVin.value)"></td>
                 <td>
-                    <p>50000 Km</p>
+                    <p>{{ infoVehicleFound?.odometro }} Km</p>
                 </td>
                 <td>
-                    <p>90 %</p>
+                    <p>{{ infoVehicleFound?.nivelCombustivel }} %</p>
                 </td>
                 <td>
-                    <p>On</p>
+                    <p>{{ infoVehicleFound?.status }}</p>
                 </td>
                 <td>
-                    <p>-12,2322</p>
+                    <p>{{ infoVehicleFound?.lat }}</p>
                 </td>
                 <td>
-                    <p>-35,2314</p>
+                    <p>{{ infoVehicleFound?.long }}</p>
                 </td>
             </tr>
         </tbody>
@@ -38,27 +38,27 @@
         <tbody>
             <tr>
                 <th>Código - Vin</th>
-                <td><input type="text"></td>
+                 <td><input #vehicleVin type="text" (change)="searchInfoVehicle(vehicleVin.value)"></td>
             </tr>
             <tr>
                 <th>Odômetro</th>
-                <td><p>50000 Km</p></td>
+                <td><p>{{ infoVehicleFound?.odometro }} Km</p></td>
             </tr>
             <tr>
                 <th>Nivel de Combustivel</th>
-                <td><p>90 %</p></td>
+                <td><p>{{ infoVehicleFound?.nivelCombustivel }} %</p></td>
             </tr>
             <tr>
                 <th>Status</th>
-                <td><p>On</p></td>
+                <td><p>{{ infoVehicleFound?.status }}</p></td>
             </tr>
             <tr>
                 <th>Lat.</th>
-                <td><p>-12,2322</p></td>
+                <td><p>{{ infoVehicleFound?.lat }}</p></td>
             </tr>
             <tr>
                 <th>Long.</th>
-                <td><p>-35,2314</p></td>
+                <td><p>{{ infoVehicleFound?.long }}</p></td>
             </tr>
         </tbody>
     </table>
