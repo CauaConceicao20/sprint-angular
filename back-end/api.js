@@ -12,7 +12,6 @@ app.use(express.static(path.join(__dirname)));
 
 app.post("/login", async (req, res) => {
     try {
-
         const { nome, senha } = req.body
 
         if (!nome || !senha) {
@@ -89,7 +88,7 @@ app.get("/vehicles", (req, res) => {
 
 app.post("/vehicleData", (req, res) => {
     try {
-        const { vin }= req.body;
+        const { vin } = req.body;
 
         switch (vin) {
             case "2FRHDUYS2Y63NHD22454":

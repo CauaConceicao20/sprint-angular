@@ -10,8 +10,8 @@ import { Observable } from "rxjs";
 })
 export class VehicleService {
 
-  private urlVehicle = `${environment.api}/vehicles`;
-  private urlVehicleData = `${environment.api}/vehicleData`
+  private urlVehicle : string = `${environment.api}/vehicles`;
+  private urlVehicleData : string = `${environment.api}/vehicleData`
 
   public constructor(private httpClient: HttpClient) {}
 

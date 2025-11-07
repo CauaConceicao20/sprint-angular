@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../../componentes/header/header.component';
+import { HeaderComponent } from '../../components/header/header.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { FooterComponent } from '../../componentes/footer/footer.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 import { VehicleService } from '../../services/vehicle.service';
 import { Observable } from 'rxjs';
 import { Vehicle } from '../../models/vehicle.model';
