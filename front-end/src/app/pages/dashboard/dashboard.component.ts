@@ -1,13 +1,25 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../../componentes/header/header.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { FooterComponent } from '../../componentes/footer/footer.component';
+import { VehicleService } from '../../services/vehicle.service';
+import { Observable } from 'rxjs';
+import { Vehicle } from '../../models/vehicle.model';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [HeaderComponent, FooterComponent],
+  imports: [CommonModule, FormsModule ,HeaderComponent, FooterComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
 
+  selectedVehicle?: Vehicle;
+
+  vehicles$: Observable<Vehicle[]>;
+
+  constructor(private vehicleService: VehicleService) {
+     this.vehicles$ = this.vehicleService.getVehicles();
+  }
 }

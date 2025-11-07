@@ -1,5 +1,5 @@
 export interface InfoVehicle {
-    id: Number,
+    id?: Number,
     odometro: Number,
     nivelCombustivel: Number,
     status: String,

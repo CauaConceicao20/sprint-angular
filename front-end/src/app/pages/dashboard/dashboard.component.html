@@ -10,11 +10,10 @@
                     <h3>Veiculo</h3>
                 </div>
                 <div class="conteudo_card">
-                    <select name="" id="">
-                        <option value="Ranger">Ranger</option>
-                        <option value="Mustang">Mustang</option>
-                        <option value="Territory">Territory</option>
-                        <option value="Bronco Sport">Bronco Sport</option>
+                    <select [(ngModel)]="selectedVehicle">
+                        <option value={{vehicle.id}} *ngFor="let vehicle of vehicles$ | async" [ngValue]="vehicle">
+                            {{ vehicle.vehicle }}
+                        </option>
                     </select>
                 </div>
             </article>
@@ -24,7 +23,7 @@
                     <h3>Total de vendas</h3>
                 </div>
                 <div class="conteudo_card">
-                    <p>1500</p>
+                    <p *ngIf="selectedVehicle">{{ selectedVehicle.volumetotal }}</p>
                     <span>Unid.</span>
                 </div>
             </article>
@@ -33,8 +32,8 @@
                 <div class="header_card">
                     <h3>Conectados</h3>
                 </div>
-                <div class="conteudo_card">
-                    <p>500</p>
+                <div class="conteudo_card" >
+                    <p *ngIf="selectedVehicle">{{ selectedVehicle.connected }}</p>
                     <span>Unid.</span>
                 </div>
             </article>
@@ -44,14 +43,14 @@
                     <h3>Update Software</h3>
                 </div>
                 <div class="conteudo_card">
-                    <p>750</p>
+                    <p *ngIf="selectedVehicle">{{selectedVehicle.softwareUpdates}}</p>
                     <span>Unid.</span>
                 </div>
             </article>
         </div>
 
-        <div class="area_veiculo">
-            <img src="img/mustang.png" alt="imagem veiculo">
+        <div class="area_veiculo" *ngIf="selectedVehicle">
+            <img src={{selectedVehicle.img}} alt="imagem veiculo">
         </div>
     </section>
     <app-footer></app-footer>

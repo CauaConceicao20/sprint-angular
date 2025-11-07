@@ -165,8 +165,6 @@ input:checked+.slider:before {
     left: 96%;
 }
 
-
-
 @media (max-width: 1200px) {
     .input_container img {
         width: 20px;

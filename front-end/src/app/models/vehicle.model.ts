@@ -1,5 +1,5 @@
 export interface Vehicle {
-    id: Number,
+    id?: Number,
     vehicle: String,
     volumetotal: Number,
     connected: Number,

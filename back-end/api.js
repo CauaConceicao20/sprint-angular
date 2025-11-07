@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname)));
 
 app.post("/login", async (req, res) => {
     try {
-        
+
         const { nome, senha } = req.body
 
         if (!nome || !senha) {
@@ -78,7 +78,7 @@ app.get("/vehicles", (req, res) => {
             }
         ];
 
-        return res.status(200).json({ vehicles });
+        return res.status(200).json(vehicles);
 
     } catch (error) {
         return res.status(500).json({
