@@ -11,19 +11,21 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+
   public login?: String;
   public password?: String;
 
-  public constructor(private loginService: LoginService, private router : Router) { }
+  public constructor(private loginService: LoginService, private router: Router) { }
 
   public authentication(): void {
     this.loginService.login(this.login!, this.password!).subscribe({
       next: (user: User) => {
         if (user.nome === this.login) {
-          this.router.navigate(['/home'])
+          this.router.navigate(['/home']);
+          console.log(user.id, user.nome, user.email);
         }
       },
-      error: (err) => {
+      error: (err: Error) => {
         console.error("Erro ao autenticar:", err);
         alert("Erro ao autenticar usuário");
       }

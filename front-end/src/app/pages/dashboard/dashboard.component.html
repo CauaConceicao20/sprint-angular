@@ -11,7 +11,7 @@
                 </div>
                 <div class="conteudo_card">
                     <select [(ngModel)]="selectedVehicle">
-                        <option value={{vehicle.id}} *ngFor="let vehicle of vehicles$ | async" [ngValue]="vehicle">
+                        <option *ngFor="let vehicle of vehicles" [ngValue]="vehicle">
                             {{ vehicle.vehicle }}
                         </option>
                     </select>
@@ -32,7 +32,7 @@
                 <div class="header_card">
                     <h3>Conectados</h3>
                 </div>
-                <div class="conteudo_card" >
+                <div class="conteudo_card">
                     <p *ngIf="selectedVehicle">{{ selectedVehicle.connected }}</p>
                     <span>Unid.</span>
                 </div>

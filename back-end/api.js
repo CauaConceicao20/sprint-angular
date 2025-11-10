@@ -77,7 +77,7 @@ app.get("/vehicles", (req, res) => {
             }
         ];
 
-        return res.status(200).json(vehicles);
+        return res.status(200).json({vehicles});
 
     } catch (error) {
         return res.status(500).json({
@@ -152,7 +152,6 @@ app.post("/vehicleData", (req, res) => {
                 });
 
             default:
-                console.log(vin);
                 return res.status(400).json({
                     message: "Código VIN utilizado não foi encontrado!"
                 });
@@ -163,7 +162,6 @@ app.post("/vehicleData", (req, res) => {
         return res.status(500).json({
             message: "Falha na comunicação com o servidor!"
         });
-
     }
 })
 

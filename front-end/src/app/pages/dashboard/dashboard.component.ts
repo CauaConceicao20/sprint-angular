@@ -4,8 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { VehicleService } from '../../services/vehicle.service';
-import { Observable } from 'rxjs';
-import { Vehicle } from '../../models/vehicle.model';
+import { Veiculo, Veiculos } from '../../models/vehicle.model';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,11 +14,26 @@ import { Vehicle } from '../../models/vehicle.model';
 })
 export class DashboardComponent {
 
-  public selectedVehicle?: Vehicle;
+  public selectedVehicle?: Veiculo;
 
-  public vehicles$: Observable<Vehicle[]>;
+  public vehicles!: Veiculos;
 
   public constructor(private vehicleService: VehicleService) {
-    this.vehicles$ = this.vehicleService.getVehicles();
+    this.vehicleService.getVehicles().subscribe({
+      next: (veiculos) => {
+        this.vehicles = veiculos.vehicles;
+        this.getVehicleById(1);
+      }
+    }
+    );
+    
+  }
+
+  public getVehicleById(id : Number) : void {
+    for(let vehicle of this.vehicles) {
+      if(vehicle.id === id) {
+        this.selectedVehicle = vehicle;
+      }
+    }
   }
 }

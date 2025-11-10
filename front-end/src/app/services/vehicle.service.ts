@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { environment } from "../../environments/environment";
-import { Vehicle } from "../models/vehicle.model";
+import { Veiculo, Veiculos, VeiculosAPI } from "../models/vehicle.model";
 import { InfoVehicle } from "../models/info-vehicle.model";
 import { Observable } from "rxjs";
 
@@ -11,12 +11,12 @@ import { Observable } from "rxjs";
 export class VehicleService {
 
   private urlVehicle : string = `${environment.api}/vehicles`;
-  private urlVehicleData : string = `${environment.api}/vehicleData`
+  private urlVehicleData : string = `${environment.api}/vehicleData`;
 
   public constructor(private httpClient: HttpClient) {}
 
-  public getVehicles() : Observable<Vehicle[]> {
-    return this.httpClient.get<Vehicle[]>(this.urlVehicle);
+  public getVehicles() : Observable<VeiculosAPI> {
+    return this.httpClient.get<VeiculosAPI>(this.urlVehicle);
   }
 
   public getInfoVehicles(vin : String) : Observable<InfoVehicle>{
