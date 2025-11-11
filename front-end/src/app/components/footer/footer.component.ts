@@ -16,6 +16,7 @@ export class FooterComponent {
   public constructor(private vehicleService : VehicleService) {}
 
   public searchInfoVehicle(vin : String) {
+    console.log("codigo " + vin);
     this.vehicleService.getInfoVehicles(vin).subscribe(
       infoVehicle => this.infoVehicleFound = infoVehicle
     );
