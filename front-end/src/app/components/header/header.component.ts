@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import { StorageService } from '../../services/storage.service';
 
 @Component({
   selector: 'app-header',
@@ -8,4 +9,10 @@ import { Component} from '@angular/core';
 })
 export class HeaderComponent {
   public menuAberto?: Boolean = false;
+
+  public constructor(private storageService : StorageService) {}
+
+  public clearDataUser() {
+    this.storageService.clearUserData();
+  }
 }

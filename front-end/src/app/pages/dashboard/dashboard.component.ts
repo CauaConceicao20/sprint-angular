@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { VehicleService } from '../../services/vehicle.service';
 import { Veiculo, Veiculos } from '../../models/vehicle.model';
+import { StorageService } from '../../services/storage.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-dashboard',
@@ -18,7 +20,15 @@ export class DashboardComponent {
 
   public vehicles!: Veiculos;
 
-  public constructor(private vehicleService: VehicleService) {
+  public constructor(private vehicleService: VehicleService, private storageService : StorageService) {
+    if(storageService.getDataLogin() == null || storageService.getDataLogin()?.nome != environment.admin){
+      alert("Alerta")
+      window.location.href = "/login";
+    }
+    this.getVehicles();
+  }
+
+  public getVehicles(): void {
     this.vehicleService.getVehicles().subscribe({
       next: (veiculos) => {
         this.vehicles = veiculos.vehicles;
@@ -26,12 +36,11 @@ export class DashboardComponent {
       }
     }
     );
-    
   }
 
-  public getVehicleById(id : Number) : void {
-    for(let vehicle of this.vehicles) {
-      if(vehicle.id === id) {
+  public getVehicleById(id: Number): void {
+    for (let vehicle of this.vehicles) {
+      if (vehicle.id === id) {
         this.selectedVehicle = vehicle;
       }
     }
