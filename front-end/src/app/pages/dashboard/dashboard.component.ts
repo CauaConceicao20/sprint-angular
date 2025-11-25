@@ -22,7 +22,6 @@ export class DashboardComponent {
 
   public constructor(private vehicleService: VehicleService, private storageService : StorageService) {
     if(storageService.getDataLogin() == null || storageService.getDataLogin()?.nome != environment.admin){
-      alert("Alerta")
       window.location.href = "/login";
     }
     this.getVehicles();
